@@ -65,13 +65,13 @@ graph.add((URI.AuthorName, RDFS.label, Literal("AuthorName")))
 
 graph.add((URI.Write, RDF.type, RDF.Property))
 graph.add((URI.Write, RDFS.domain, URI.Author))
-graph.add((URI.Write, RDFS.range, URI.Paper))
+graph.add((URI.Write, RDFS.range, URI.ResearchPaper))
 graph.add((URI.Write, RDFS.label, Literal("Write")))
 
 graph.add((URI.CorrespondingAuthor, RDF.type, RDF.Property))
 graph.add((URI.CorrespondingAuthor, RDFS.subPropertyOf, URI.Write))
 graph.add((URI.CorrespondingAuthor, RDFS.domain, URI.Author))
-graph.add((URI.CorrespondingAuthor, RDFS.range, URI.Paper))
+graph.add((URI.CorrespondingAuthor, RDFS.range, URI.ResearchPaper))
 graph.add((URI.CorrespondingAuthor, RDFS.label, Literal("CorrespondingAuthor")))
 
 # (2.2) Reviewer
