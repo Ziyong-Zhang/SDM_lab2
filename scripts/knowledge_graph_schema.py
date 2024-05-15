@@ -92,10 +92,10 @@ graph.add((URI.ReviewOf, RDFS.domain, URI.ReviewText))
 graph.add((URI.ReviewOf, RDFS.range, URI.SubmittedPaper))
 graph.add((URI.ReviewOf, RDFS.label, Literal("ReviewOf")))
 
-graph.add((URI.Decision, RDF.type, RDF.Property))
-graph.add((URI.Decision, RDFS.domain, URI.ReviewText))
-graph.add((URI.Decision, RDFS.range, XSD.boolean))
-graph.add((URI.Decision, RDFS.label, Literal("Decision")))
+graph.add((URI.AcceptPossibility, RDF.type, RDF.Property))
+graph.add((URI.AcceptPossibility, RDFS.domain, URI.ReviewText))
+graph.add((URI.AcceptPossibility, RDFS.range, XSD.int))
+graph.add((URI.AcceptPossibility, RDFS.label, Literal("AcceptPossibility")))
 
 ############## （3) Class Journal ######################
 graph.add((URI.Journal, RDF.type, RDFS.Class))
