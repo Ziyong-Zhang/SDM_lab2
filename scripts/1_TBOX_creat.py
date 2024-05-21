@@ -6,7 +6,6 @@ graph = Graph()
 
 URI = Namespace("http://SDM_lab_2.org/")
 
-graph.bind('lab',URI)
 
 ############## （1) Class Paper ######################
 graph.add((URI.ResearchPaper, RDF.type, RDFS.Class))

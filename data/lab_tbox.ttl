@@ -1,126 +1,125 @@
-@prefix lab: <http://SDM_lab_2.org/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-lab:Author a rdfs:Class ;
+<http://SDM_lab_2.org/Author> a rdfs:Class ;
     rdfs:label "Author" ;
-    rdfs:subClassOf lab:Person .
+    rdfs:subClassOf <http://SDM_lab_2.org/Person> .
 
-lab:Conference a rdfs:Class ;
+<http://SDM_lab_2.org/Conference> a rdfs:Class ;
     rdfs:label "Conference" .
 
-lab:Journal a rdfs:Class ;
+<http://SDM_lab_2.org/Journal> a rdfs:Class ;
     rdfs:label "Journal" .
 
-lab:Person a rdfs:Class ;
+<http://SDM_lab_2.org/Person> a rdfs:Class ;
     rdfs:label "Person" .
 
-lab:Proceedings a rdfs:Class ;
+<http://SDM_lab_2.org/Proceedings> a rdfs:Class ;
     rdfs:label "Proceedings" .
 
-lab:RegularConference a rdfs:Class ;
+<http://SDM_lab_2.org/RegularConference> a rdfs:Class ;
     rdfs:label "RegularConference" ;
-    rdfs:subClassOf lab:Conference .
+    rdfs:subClassOf <http://SDM_lab_2.org/Conference> .
 
-lab:ResearchPaper a rdfs:Class ;
+<http://SDM_lab_2.org/ResearchPaper> a rdfs:Class ;
     rdfs:label "ResearchPaper" .
 
-lab:ReviewText a rdfs:Class ;
+<http://SDM_lab_2.org/ReviewText> a rdfs:Class ;
     rdfs:label "ReviewText" .
 
-lab:Reviewer a rdfs:Class ;
+<http://SDM_lab_2.org/Reviewer> a rdfs:Class ;
     rdfs:label "Reviewer" ;
-    rdfs:subClassOf lab:Person .
+    rdfs:subClassOf <http://SDM_lab_2.org/Person> .
 
-lab:SubmittedPaper a rdfs:Class ;
+<http://SDM_lab_2.org/SubmittedPaper> a rdfs:Class ;
     rdfs:label "SubmittedPaper" .
 
-lab:Topics a rdfs:Class ;
+<http://SDM_lab_2.org/Topics> a rdfs:Class ;
     rdfs:label "Topics" .
 
-lab:Venue a rdfs:Class ;
+<http://SDM_lab_2.org/Venue> a rdfs:Class ;
     rdfs:label "Venue" .
 
-lab:Volumes a rdfs:Class ;
+<http://SDM_lab_2.org/Volumes> a rdfs:Class ;
     rdfs:label "Volumes" .
 
-lab:Workshop a rdfs:Class ;
+<http://SDM_lab_2.org/Workshop> a rdfs:Class ;
     rdfs:label "Workshop" ;
-    rdfs:subClassOf lab:Conference .
+    rdfs:subClassOf <http://SDM_lab_2.org/Conference> .
 
-lab:BelongTo a rdf:Property ;
+<http://SDM_lab_2.org/BelongTo> a rdf:Property ;
     rdfs:label "BelongTo" ;
-    rdfs:domain lab:Conference ;
-    rdfs:range lab:Proceedings .
+    rdfs:domain <http://SDM_lab_2.org/Conference> ;
+    rdfs:range <http://SDM_lab_2.org/Proceedings> .
 
-lab:Cites a rdf:Property ;
+<http://SDM_lab_2.org/Cites> a rdf:Property ;
     rdfs:label "Cites" ;
-    rdfs:domain lab:ResearchPaper ;
-    rdfs:range lab:ResearchPaper .
+    rdfs:domain <http://SDM_lab_2.org/ResearchPaper> ;
+    rdfs:range <http://SDM_lab_2.org/ResearchPaper> .
 
-lab:ConIn a rdf:Property ;
+<http://SDM_lab_2.org/ConIn> a rdf:Property ;
     rdfs:label "ConIn" ;
-    rdfs:domain lab:RegularConference ;
-    rdfs:range lab:Proceedings .
+    rdfs:domain <http://SDM_lab_2.org/RegularConference> ;
+    rdfs:range <http://SDM_lab_2.org/Proceedings> .
 
-lab:HasTopics a rdf:Property ;
+<http://SDM_lab_2.org/HasTopics> a rdf:Property ;
     rdfs:label "HasTopics" ;
-    rdfs:domain lab:ResearchPaper ;
-    rdfs:range lab:Topics .
+    rdfs:domain <http://SDM_lab_2.org/ResearchPaper> ;
+    rdfs:range <http://SDM_lab_2.org/Topics> .
 
-lab:InVenue a rdf:Property ;
+<http://SDM_lab_2.org/InVenue> a rdf:Property ;
     rdfs:label "InVenue" ;
-    rdfs:domain lab:Proceedings ;
-    rdfs:range lab:Venue .
+    rdfs:domain <http://SDM_lab_2.org/Proceedings> ;
+    rdfs:range <http://SDM_lab_2.org/Venue> .
 
-lab:IsInJournal a rdf:Property ;
+<http://SDM_lab_2.org/IsInJournal> a rdf:Property ;
     rdfs:label "IsInJournal" ;
-    rdfs:domain lab:ResearchPaper ;
-    rdfs:range lab:Volumes .
+    rdfs:domain <http://SDM_lab_2.org/ResearchPaper> ;
+    rdfs:range <http://SDM_lab_2.org/Volumes> .
 
-lab:IsInProceeding a rdf:Property ;
+<http://SDM_lab_2.org/IsInProceeding> a rdf:Property ;
     rdfs:label "IsInProceeding" ;
-    rdfs:domain lab:ResearchPaper ;
-    rdfs:range lab:Proceedings .
+    rdfs:domain <http://SDM_lab_2.org/ResearchPaper> ;
+    rdfs:range <http://SDM_lab_2.org/Proceedings> .
 
-lab:OfJournal a rdf:Property ;
+<http://SDM_lab_2.org/OfJournal> a rdf:Property ;
     rdfs:label "OfJournal" ;
-    rdfs:domain lab:Journal ;
-    rdfs:range lab:Volumes .
+    rdfs:domain <http://SDM_lab_2.org/Journal> ;
+    rdfs:range <http://SDM_lab_2.org/Volumes> .
 
-lab:PaperAbstract a rdf:Property ;
+<http://SDM_lab_2.org/PaperAbstract> a rdf:Property ;
     rdfs:label "PaperAbstract" ;
-    rdfs:domain lab:ResearchPaper ;
+    rdfs:domain <http://SDM_lab_2.org/ResearchPaper> ;
     rdfs:range xsd:string .
 
-lab:PaperTitle a rdf:Property ;
+<http://SDM_lab_2.org/PaperTitle> a rdf:Property ;
     rdfs:label "PaperTitle" ;
-    rdfs:domain lab:ResearchPaper ;
+    rdfs:domain <http://SDM_lab_2.org/ResearchPaper> ;
     rdfs:range xsd:string .
 
-lab:ReviewOf a rdf:Property ;
+<http://SDM_lab_2.org/ReviewOf> a rdf:Property ;
     rdfs:label "ReviewOf" ;
-    rdfs:domain lab:ReviewText ;
-    rdfs:range lab:SubmittedPaper .
+    rdfs:domain <http://SDM_lab_2.org/ReviewText> ;
+    rdfs:range <http://SDM_lab_2.org/SubmittedPaper> .
 
-lab:Submitted a rdf:Property ;
+<http://SDM_lab_2.org/Submitted> a rdf:Property ;
     rdfs:label "Submitted" ;
-    rdfs:domain lab:ResearchPaper ;
-    rdfs:range lab:SubmittedPaper .
+    rdfs:domain <http://SDM_lab_2.org/ResearchPaper> ;
+    rdfs:range <http://SDM_lab_2.org/SubmittedPaper> .
 
-lab:WorkshopIn a rdf:Property ;
+<http://SDM_lab_2.org/WorkshopIn> a rdf:Property ;
     rdfs:label "WorkshopIn" ;
-    rdfs:domain lab:Workshop ;
-    rdfs:range lab:Proceedings .
+    rdfs:domain <http://SDM_lab_2.org/Workshop> ;
+    rdfs:range <http://SDM_lab_2.org/Proceedings> .
 
-lab:Write a rdf:Property ;
+<http://SDM_lab_2.org/Write> a rdf:Property ;
     rdfs:label "Write" ;
-    rdfs:domain lab:Author ;
-    rdfs:range lab:ResearchPaper .
+    rdfs:domain <http://SDM_lab_2.org/Author> ;
+    rdfs:range <http://SDM_lab_2.org/ResearchPaper> .
 
-lab:WriteReview a rdf:Property ;
+<http://SDM_lab_2.org/WriteReview> a rdf:Property ;
     rdfs:label "WriteReview" ;
-    rdfs:domain lab:Reviewer ;
-    rdfs:range lab:SubmittedPaper .
+    rdfs:domain <http://SDM_lab_2.org/Reviewer> ;
+    rdfs:range <http://SDM_lab_2.org/SubmittedPaper> .
 
