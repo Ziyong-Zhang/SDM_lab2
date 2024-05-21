@@ -1,0 +1,9 @@
+PREFIX ns1: <http://SDM_lab_2.org/>
+SELECT ?author
+WHERE {
+    ?author a ns1:Author.
+}
+
+
+
+
