@@ -1,3 +1,4 @@
+# 1. Find all Authors.
 PREFIX ns1: <http://SDM_lab_2.org/>
 SELECT ?author
 WHERE {
@@ -5,5 +6,86 @@ WHERE {
 }
 
 
+# 2. Find all properties whose domain is Author.
+PREFIX ns1: <http://SDM_lab_2.org/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?property
+WHERE {
+    ?property rdfs:domain ns1:Author.
+}
+
+
+# 3. Find all properties whose domain is either Conference or Journal.
+PREFIX ns1: <http://SDM_lab_2.org/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?property
+WHERE {
+    {
+        ?property rdfs:domain ns1:Conference.
+    } UNION {
+        ?property rdfs:domain ns1:Journal.
+    }
+}
+
+# 4. Find all the papers written by a given author that where published in database conferences.
+
+# Find Authors who write Database Topics Paper
+PREFIX ns1: <http://SDM_lab_2.org/> 
+
+SELECT ?ResearchPaper ?Author
+WHERE {
+  ?ResearchPaper ns1:HasTopics ns1:Topics_database .
+  ?Author ns1:Write ?ResearchPaper .
+}
+
+
+# Found Author_13404674100
+
+
+PREFIX ns1: <http://SDM_lab_2.org/> 
+
+SELECT ?ResearchPaper ?Conference
+WHERE {
+  ?ResearchPaper ns1:HasTopics ns1:Topics_database .
+#                  ns1:IsInProceeding ?Proceedings .
+    
+  ?Author ns1:Write ?ResearchPaper .
+  FILTER (?Author = ns1:Author_13404674100) 
+    
+#  ?ResearchPaper ns1:IsInProceeding ?Proceedings .
+}
+
+
+
+
+# 5. Find all the papers written by a given author that where published in database conferences.
+
+PREFIX ns1: <http://SDM_lab_2.org/> 
+
+SELECT ?ResearchPaper ?Conference
+WHERE {
+  ?ResearchPaper ns1:HasTopics ns1:Topics_database ;
+                  ns1:IsInJournal ?Volumes .
+    
+  ?Journal ns1:OfJournal ?Volumes.
+    
+  ?Author ns1:Write ?ResearchPaper .
+  FILTER (?Author = ns1:Author_13404674100) 
+}
+
+
+
+# 6. Find all the Review Text written by a given Reviewer
+PREFIX ns1: <http://SDM_lab_2.org/> 
+
+SELECT ?ReviewText
+WHERE {
+  ?ReviewText ns1:ReviewOf ?SubmittedPaper.
+    
+  ?Reviewer ns1:WriteReview ?SubmittedPaper .
+  FILTER (?Reviewer = ns1:Reviewer_10039795600) 
+}
 
 
