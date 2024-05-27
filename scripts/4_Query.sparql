@@ -46,11 +46,10 @@ WHERE {
 
 PREFIX ns1: <http://SDM_lab_2.org/> 
 
-SELECT ?ResearchPaper ?Conference
+SELECT ?ResearchPaper
 WHERE {
   ?ResearchPaper ns1:HasTopics ns1:Topics_database .
-#                  ns1:IsInProceeding ?Proceedings .
-    
+
   ?Author ns1:Write ?ResearchPaper .
   FILTER (?Author = ns1:Author_13404674100) 
     
@@ -60,11 +59,11 @@ WHERE {
 
 
 
-# 5. Find all the papers written by a given author that where published in database conferences.
+# 5. Find all the papers written by a given author that where published in database Journals.
 
 PREFIX ns1: <http://SDM_lab_2.org/> 
 
-SELECT ?ResearchPaper ?Conference
+SELECT ?ResearchPaper
 WHERE {
   ?ResearchPaper ns1:HasTopics ns1:Topics_database ;
                   ns1:IsInJournal ?Volumes .
