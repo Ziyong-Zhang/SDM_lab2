@@ -14,6 +14,8 @@ Contains CSV files and Turtle files used to build the ABOX and TBOX of the knowl
 ### `graph`
 Stores images and diagrams related to the project, store running results of queries:
 - `B.1_TBOX.png`: Image showing the TBOX structure.
+- `B.1_Class_hierarchy.png`: Image showing the class hierarchy in TBOX.
+- `B.3_Class_relationship.png`: Image showing the class relationship in the instances.
 
 ### `scripts`
 Python scripts and Jupyter notebooks for creating the TBOX and ABOX, and for running SPARQL queries:
